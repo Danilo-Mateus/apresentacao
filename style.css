@@ -18,7 +18,7 @@ body.imgback{
     width: 100%;
     height: 100vh;
     background-size: cover;
-    background-image:  url(e4c70a31-d5ff-4306-a768-9b5283eab33e.png) ;
+    background-image:  url(Teladepc.png) ;
     background-position: center;
     
 }
@@ -40,6 +40,8 @@ header{
     align-items: center;
     text-align: center;
     padding-top: 1rem;
+    font-size: 3rem;
+    color: #1b7e44;
    
     
 }
@@ -85,6 +87,7 @@ button{
     font-size: 12px;
     cursor: pointer;
     width: 150px;
+    margin-top: 30px;
 }
 
 button:hover{
@@ -99,7 +102,7 @@ button:hover{
 
 .text h3{
     color: #fff;
-    font-size: 15px;
+    font-size: 1.5rem;
 }
 
 .text h1{
@@ -115,7 +118,7 @@ button:hover{
     color: #fff;
     font-weight: 500;
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 0.8rem;
 }
 
 .redes-social{
@@ -132,10 +135,54 @@ button:hover{
 .btn{
     margin-top: 15px;
 }
+.imagenss{
+    text-align: center;
+    justify-content: space-evenly;
 
-@media screen and (max-width:600px){
-    .cabeçalho-link {
-        display: none;
-    }
+}
+.img1{
+    width: 40%;
+    height: 220px;
+    border: solid 2px black ;
     
+}
+.h1{
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width:700px){
+    .img1{
+       width: 70%;
+       height: 254px;
+       scroll-behavior: auto;
+    }
+    .logo {
+        display:none ;
+    } 
+
+.redes-social a{
+    color: black;
+}
+button{
+    color: #000000;
+    background: transparent;
+    border:solid 1px #030303;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 150px;
+}
+.botao1{
+    
+    color: #2ecc71;
+    background: transparent;
+    border:solid 1px #2ecc71;
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    width: 150px;
+}
 }
