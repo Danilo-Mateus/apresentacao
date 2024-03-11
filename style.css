@@ -10,14 +10,13 @@
 }
 
 body{
-    overflow: hidden;
     background-image: linear-gradient(to right, black, gray);
    
 }
 body.imgback{
     width: 100%;
     height: 100vh;
-    background-size: cover;
+   background-size: cover;
     background-image:  url(Teladepc.png) ;
     background-position: center;
     
@@ -32,6 +31,7 @@ body.imgback{
     height: 100vh;
    
 }
+
 
 header{
     display: flex;
@@ -186,3 +186,47 @@ button{
     width: 150px;
 }
 }
+#sobremim{
+    background-color: rgb(27, 5, 27);
+}
+#textosobremim{
+    background-color: rgb(27, 5, 27);
+    color: white;
+    padding-top: 120px;
+    background-image: none;
+    background: linear-gradient(to up , rgb(58, 5, 58), black);
+    text-align: left;
+        padding: 20px; /* Espaçamento interno */
+        border-radius: 10px; /* Arredondamento das bordas */
+        width: 300px; /* Largura do bloquinho */
+        top: 20px; /* Distância do topo da página */
+        left: 20px; /* Distância da esquerda da página */
+        margin-left: 200px;
+        opacity: 0;
+        transition: opacity 0.5s ease, left 1s ease; /* Adicionando transição suave para left */
+        left: -200px; /* Inicialmente, posicionando o texto fora da tela para a esquerda */
+
+    }
+    #textosobremim.aparecer {
+        opacity: 1;
+     
+    }
+
+    .bonequinho {
+        display: none; /* Inicialmente oculta a imagem */
+        position: fixed; /* Fixa a imagem na tela */
+        bottom: 20px; /* Distância do fundo da página */
+        right: 20px; /* Distância da direita da página */
+        z-index: 999; /* Garante que a imagem fique acima de outros elementos */
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        position: fixed;
+    }
+    .bonequinho.aparecer {
+        display: block;
+        opacity: 1;
+    }
+
+    .Projetos{
+        
+    }
