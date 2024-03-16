@@ -8,23 +8,18 @@
     text-decoration: none;
     list-style: none;
 }
-
-body{
-    background-image: linear-gradient(to right, black, gray);
-   
-}
 body.imgback{
     width: 100%;
     height: 100vh;
    background-size: cover;
-    background-image:  url(Teladepc.png) ;
+   background-color: rgb(27, 5, 27) ;
     background-position: center;
     
 }
 
 
 .background{
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./img/background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5),  rgb(27, 5, 27));
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -96,9 +91,14 @@ button:hover{
     transition: 0.5s;
 }
 
-.container-text{
-    padding: 150px 0 0 130px;
-}
+
+    .container-text {
+        padding: 150px 20px 0 130px; /* Ajuste do padding */
+        display: flex;
+        justify-content: flex-end; /* Alinha os itens ao final do contêiner (direita) */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
 
 .text h3{
     color: #fff;
@@ -113,14 +113,36 @@ button:hover{
 .text span{
     color: #1b7e44; 
 }
-
+.text {
+    flex: 1; /* Para ocupar o espaço disponível */
+    padding-right: 200px; /* Espaço à direita */
+}
 .text p{
     color: #fff;
     font-weight: 500;
     margin-top: 10px;
     font-size: 0.8rem;
+    flex: 1;
+}
+.pixel-art {
+     /* Move a imagem para a direita */ /* Adiciona um espaço à direita da imagem *//* Não permite que a imagem diminua de tamanho */
+    width: 400px; /* Ajusta o tamanho da imagem, se necessário */
+}
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
+.swing {
+    animation: swing 3s ease-in-out infinite;
+}
 .redes-social{
     margin-top: 10px;
     margin-left: 20px;
@@ -188,45 +210,172 @@ button{
 }
 #sobremim{
     background-color: rgb(27, 5, 27);
+    display: flex;
+}
+.conteudo {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 20px; /* Espaçamento entre os elementos */
 }
 #textosobremim{
+    display: flex; /* Alterado para flex */
+     align-items: center; /* Centraliza o conteúdo verticalmente */
     background-color: rgb(27, 5, 27);
     color: white;
-    padding-top: 120px;
-    background-image: none;
-    background: linear-gradient(to up , rgb(58, 5, 58), black);
-    text-align: left;
-        padding: 20px; /* Espaçamento interno */
-        border-radius: 10px; /* Arredondamento das bordas */
-        width: 300px; /* Largura do bloquinho */
-        top: 20px; /* Distância do topo da página */
-        left: 20px; /* Distância da esquerda da página */
-        margin-left: 200px;
-        opacity: 0;
-        transition: opacity 0.5s ease, left 1s ease; /* Adicionando transição suave para left */
-        left: -200px; /* Inicialmente, posicionando o texto fora da tela para a esquerda */
-
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 200px;
+    transition: opacity 0.5s ease, left 1s ease;
+    left: -200px;/
+    
     }
+
     #textosobremim.aparecer {
         opacity: 1;
      
     }
 
     .bonequinho {
-        display: none; /* Inicialmente oculta a imagem */
-        position: fixed; /* Fixa a imagem na tela */
         bottom: 20px; /* Distância do fundo da página */
-        right: 20px; /* Distância da direita da página */
-        z-index: 999; /* Garante que a imagem fique acima de outros elementos */
-        opacity: 0;
-        transition: opacity 0.5s ease;
-        position: fixed;
-    }
-    .bonequinho.aparecer {
-        display: block;
-        opacity: 1;
+        right: 20px; /* Distância da direita da página */ /* Garante que a imagem fique acima de outros elementos */
     }
 
-    .Projetos{
-        
+    #Projetos{
+        background-color: rgb(27, 5, 27);
+        padding-top: 10%;
+        padding-bottom: 5%;
     }
+    #Projetos h1{
+        background-color: rgb(27, 5, 27);
+        color: white;
+        margin-left: 17%;
+        margin-bottom: 2%;
+    }
+    .wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.slide-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide-list {
+    display: flex;
+}
+
+.slide-item {
+    cursor: grab;
+    flex-shrink: 0;
+    padding: 0 10px;
+    width: 90vw;
+}
+
+.slide-content {
+    border-radius: 10px;
+    border: 1px solid #fff;
+    box-shadow: #070707 0px 12px 12px;
+    position: relative;
+}
+
+.slide-image {
+    border-radius: 10px;
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+}
+
+.slide-description {
+    border-radius: 10px;
+    background: linear-gradient(to top, #000, transparent);
+    color: #fff;
+    position: absolute;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+}
+.slide-description h3 {
+    font-family: 'Koulen', sans-serif;
+    font-size: 48px;
+    position: relative;
+    top: 16px
+}
+
+.slide-description p {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 24px;
+}
+
+.slide-nav-button {
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 36px;
+    position: absolute;
+    z-index: 1;
+}
+
+.slide-nav-previous {
+    left: 20px;
+}
+
+.slide-nav-next {
+    right: 20px;
+}
+
+.slide-controls {
+    margin: 30px auto 0;
+}
+
+.slide-control-button {
+    color: #fff;
+    cursor: pointer;
+    background: transparent;
+    font-size: 18px;
+    margin: 0 5px;
+}
+
+.slide-control-button.active {
+    color: #cd8cf5;
+}
+
+@media screen and (max-width: 768px) {
+    .slide-description {
+        padding: 10px;
+    }
+    
+    .slide-description h3 {
+        font-size: 24px;
+        top: 0;
+    }
+
+    .slide-description p {
+        display: none;
+    }
+
+    .slide-nav-button {
+        margin-top: -20px;
+        font-size: 28px;
+    }
+    
+    .slide-nav-previous {
+        left: 10px;
+    }
+    
+    .slide-nav-next {
+        right: 10px;
+    }
+
+    .slide-controls {
+        margin: 15px auto 0;
+    }
+
+    .slide-control-button {
+        font-size: 14px;
+    }
+}
