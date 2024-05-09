@@ -241,13 +241,3 @@ function setListeners() {
     })
 }
 
-function initSlider({startAtIndex = 0, autoPlay = true, timeInterval = 3000}) {
-    state.autoPlay = autoPlay
-    state.timeInterval = timeInterval
-    createControlButtons()
-    createSlideClones()
-    setListeners()
-    setVisibleSlide({ index: startAtIndex + 2, animate: true })
-    setAutoPlay()
-}
-

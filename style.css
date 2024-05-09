@@ -224,9 +224,10 @@ button{
     color: white;
     padding: 20px;
     border-radius: 10px;
-    margin-left: 200px;
+    margin-left: 00px;
     transition: opacity 0.5s ease, left 1s ease;
-    left: -200px;/
+    font-size: 120%;
+    
     
     }
 
@@ -234,12 +235,34 @@ button{
         opacity: 1;
      
     }
-
-    .bonequinho {
-        bottom: 20px; /* Distância do fundo da página */
-        right: 20px; /* Distância da direita da página */ /* Garante que a imagem fique acima de outros elementos */
+    #hab{
+        display: flex; /* Alterado para flex */
+        align-items: center; /* Centraliza o conteúdo verticalmente */
+       background-color: rgb(27, 5, 27);
+       color: white;
+       padding: 20px;
+       border-radius: 10px;
+       transition: opacity 0.5s ease, left 1s ease;
+       right: 20px;
     }
-
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centraliza as habilidades horizontalmente */
+        gap: 20px; /* Espaçamento entre as habilidades */
+    }
+    
+    .skill {
+        margin-bottom: 20px; /* Adiciona espaço abaixo de cada habilidade */
+        animation: rotateSlow 20s linear infinite; /* Adiciona a animação de rotação */
+    }
+    
+    .skill img {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    
+    
     #Projetos{
         background-color: rgb(27, 5, 27);
         padding-top: 10%;
@@ -377,5 +400,13 @@ button{
 
     .slide-control-button {
         font-size: 14px;
+    }
+}
+@keyframes rotateSlow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
