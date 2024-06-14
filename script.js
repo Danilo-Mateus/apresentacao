@@ -240,4 +240,15 @@ function setListeners() {
         }, 1000)
     })
 }
+const habilidades = document.querySelector('.skills');
+
+window.addEventListener('scroll', function() {
+  const habilidadesTop = habilidades.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  if (habilidadesTop - windowHeight < 0) {
+    habilidades.classList.add('animate__animated', 'animate__backInDown');
+  }
+});
+
 

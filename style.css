@@ -253,8 +253,7 @@ button{
     }
     
     .skill {
-        margin-bottom: 20px; /* Adiciona espaço abaixo de cada habilidade */
-        animation: rotateSlow 20s linear infinite; /* Adiciona a animação de rotação */
+
     }
     
     .skill img {
